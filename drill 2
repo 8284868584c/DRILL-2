@@ -1,0 +1,82 @@
+## pipes ==
+
+1 ) wget https://raw.githubusercontent.com/bobdeng/owlreader/master/ERead/assets/books/Harry%20Potter%20and%20the%20Goblet%20of%20Fire.txt
+mv "Harry Potter and the Goblet of Fire.txt" harry
+
+2 ) cat harry | head -3
+
+3 ) cat harry | tail -10
+
+4)
+4.a ) Harry[3172 times] => 
+  grep -o -i Harry harry | wc -l
+4.b ) Ron[1358 TIMES] => 
+  grep -o -i Ron harry | wc -l
+4.c ) Hermione[872 times] => 
+  grep -o -i Hermione harry | wc -l
+4.d ) Dumbledore[596 times] => 
+  grep -o -i Dumbledore harry | wc -l
+  
+5 )  cat harry | head -200 | tail -101
+
+6 ) grep -wo '[[:alnum:]]\+' harry | sort | uniq -u | wc -l
+
+
+
+## Processes, ports
+
+1 ) pidof chrome
+  echo $PPID
+  
+2 ) pkill chrome
+
+3 ) ps aux | sort -nrk 3,3 | head -n 3
+
+4 ) ps -eo %mem --sort=-%mem | head -4
+
+5 ) sudo apt install python
+  python3 -m http.server 8000
+
+6 ) pkill bash 
+
+7 ) sudo python3 -m http.server 90
+
+8 ) netstat -at
+  netstat -au 
+
+9 ) udo netstat -nlp | grep 5432
+
+
+## Managing software
+
+1 ) sudo apt install htop
+  sudo apt install vim
+  sudo apt install nginx
+
+2 ) sudo apt-get remove nginx
+
+
+## MICS
+
+1 ) ip a
+
+2 ) dig google.com 
+
+3 ) ping -c 3 google.com
+
+4 )
+4.a ) node commmand is located in bin file.
+  whereis node
+
+4.b ) whereis code
+
+# code: /snap/bin/code
+
+
+
+
+
+
+
+
+
